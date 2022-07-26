@@ -18,15 +18,17 @@ for t in range(T):
                 sero_arr[j].append(garo_arr[i][j]) 
 
     # 가로 방향으로 찾기
-    for i in range(N-K+1):
-        for j in range(N-K+1):
-            if(garo_arr[i][j : j+K] == [1]*K):
-                count += 1
-    
-    # 세로 방향으로 찾기
-    for i in range(N-K+1):
-        for j in range(N-K+1):
-            if(sero_arr[i][j : j+K] == [1]*K):
-                count += 1
-    
+    idx = 0
+    while(idx < N-1):
+        while(idx < N and garo_arr[idx] != 0):
+            idx += 1
+        
+        count_one = 0
+        while(idx < N and garo_arr[idx] != 1):
+            count_one += 1
+            idx += 1
+        
+        if(count_one == K):
+            count += 1
+
     print(f'#{t+1} {count}')
