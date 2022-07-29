@@ -1,5 +1,6 @@
 num_lst = set(range(1,10001))
 
+# 리스트를 만들어서 생성자를 하나씩 돌려가며 생성자로 만들어진 숫자가 있으면 리스트에서 제거
 for num in range(10001):
     sumV = num
 
