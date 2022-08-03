@@ -1,5 +1,0 @@
-weight = int(input())
-
-
-
-

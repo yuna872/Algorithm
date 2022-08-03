@@ -35,6 +35,11 @@ for t in range(T):
     garo_arr = [list(map(int,input().split())) for _ in range(N)]
     sero_arr = [[] for _ in range(N)]
 
+    
+    # for n in range(N):
+    #     garo_arr.append(list(map(int,input().split())))
+    #     sero_arr.append([])
+
     # 세로 방향 배열 만들기
     for j in range(N):
         for i in range(N-1,-1,-1):
