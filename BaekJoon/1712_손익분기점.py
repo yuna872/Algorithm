@@ -1,11 +1,16 @@
-import math
+A, B, C = map(int, input().split())
 
-A,B,C = map(int,input().split())
-howmany = 1
-
-if(C <= B):
+if(B > C):
     howmany = -1
-else : 
-    howmany = math.ceil(A//(C-B)) + 1
+else:
+    cost = A
+    profit = 0
+    howmany = 1
 
-print(howmany)
+    while(profit < cost):
+        cost += B
+        profit += C
+
+        howmany += 1
+
+print(howmany) 
