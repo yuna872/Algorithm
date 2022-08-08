@@ -1,3 +1,4 @@
+# 에라토스테네스의 체
 def isprime(n):
     a = [False,False] + [True]*(n-1)
     primes=[]
@@ -13,6 +14,7 @@ while True:
     N = int(input())
     count = 0
 
+    # 0일때 탈출
     if N == 0 :
         break
 

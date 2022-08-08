@@ -17,10 +17,12 @@ def find_space(N,K,arr):
             while(j < N and arr[i][j] == 1):
                 count_one += 1
                 j += 1
+            
             # count_one이 K와 같으면 count++ 아니면 다시 돌아가
             if(count_one == K):
                 count += 1
             else : continue
+            
     # 단어가 들어갈 수 있는 공간의 개수 리턴        
     return count
 
