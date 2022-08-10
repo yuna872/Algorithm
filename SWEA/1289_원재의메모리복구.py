@@ -1,6 +1,6 @@
 T = int(input())
 
-for t in range(1,T+1):
+for t in range(1, T+1):
     binary = input()
 
     zero = binary.split('1')
@@ -11,7 +11,7 @@ for t in range(1,T+1):
     while '' in one:
         one.remove('')
 
-    if(binary[0] == '0'):
+    if binary[0] == '0':
         print(f'#{t} {len(zero)+len(one)-1}')
     else:
         print(f'#{t} {len(zero)+len(one)}')

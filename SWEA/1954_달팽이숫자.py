@@ -18,7 +18,7 @@ for test_case in range(1, T+1):
             while count > 0:
                 arr[p[0]][p[1]] = num
 
-                p =[ x+y for x, y in zip(p, d)]
+                p = [x+y for x, y in zip(p, d)]
 
                 count -= 1
                 num += 1
