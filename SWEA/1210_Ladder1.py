@@ -1,48 +1,38 @@
+import sys
+sys.stdin = open("input.txt","r")
+
 for test_case in range(1, 11):
-    test_case_num = int(input())
+    t = int(input())
+
+    # 사다리 입력 받기
     ladder = [list(map(int, input().split())) for _ in range(100)]
 
+    # 오른쪽, 왼쪽, 위 방향 순서대로
+    dx = [0, 0, -1]
+    dy = [1, -1, 0]
+
+    # 처음 시작하는 점 찾기
+    for i in range(100):
+        if ladder[99][i] == 2:
+            col = i
+
+    #오왼위 순서대로 찔러보고 1이면 이동해,,,벽에 닿았을 때는 달라져야함,,,,
     row = 99
-    col = ladder[99].index(2)  # 맨 마지막 행 2에서 시작
-
-    #첫번째 줄에 닿을때까지
     while row > 0:
-        # 양 쪽 벽에 닿지 않는 경우
-        if 0 < col < 99:
-            # 왼쪽이 1 이면 이동하면서 지나온 자리 2로 변경
-            if ladder[row][col-1] == 1:
-                while ladder[row][col-1]:
-                    col -= 1
+        for d in range(3):
+            if 0 <= row + dx[d] <= 99 and 0 <= col + dy[d] <= 99:
+                if ladder[row+ dx[d]][col + dy[d]] == 1:
+                    # 지나온 자리는 2로 변경
                     ladder[row][col] = 2
-            elif ladder[row][col+1] == 1:
-                while ladder[row][col+1]:
-                    col += 1
-                    ladder[row][col] = 2
-            else:
-                row -= 1
-                ladder[row][col] = 2
-        # 왼쪽 벽에 닿을 경우
-        elif col == 0:
-            if ladder[row][col+1] == 1:
-                while ladder[row][col+1]:
-                    col += 1
-                    ladder[row][col] = 2
-            else:
-                row -= 1
-                ladder[row][col] = 2
+                    row = row + dx[d]
+                    col = col + dy[d]
 
-        # 오른쪽 벽에 닿을 경우
-        elif col == 99:
-            if ladder[row][col-1] == 1:
-                while ladder[row][col-1]:
-                    col -= 1
-                    ladder[row][col] = 2
-            else:
-                row -= 1
-                ladder[row][col] = 2
+    print(f'#{test_case} {col}')
 
-        if row == 0:
-            break
-            
-    print(ladder)
-    print(f'#{test_case_num} {ladder[0].index(2)}')
+
+
+
+
+
+
+
