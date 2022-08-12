@@ -1,7 +1,7 @@
 T = int(input())
 
 for t in range(T):
-    N,M = map(int,input().split())
+    N, M = map(int, input().split())
     arr = []
     # 원소 합계의 최댓값을 담을 변수 선언
     max_pari = 0
