@@ -12,8 +12,10 @@ for test_case in range(1, T+1):
     dx = [-1, 1, 0, 0, 1, 1, -1, -1]
     dy = [0, 0, 1, -1, 1, -1, 1, -1]
 
+    # 모든원소 차례대로 에프킬라 중심이 되게 해,,
     for i in range(N):
         for j in range(N):
+
 
             sumV = board[i][j]
             for m in range(1, M):

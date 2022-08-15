@@ -20,7 +20,7 @@ for test_case in range(1, T+1):
             if bus_stop[idx+k] == 1:
                 cnt += 1
                 break
-            # 못 찾았으면 k-1, 게다가 k가 0 이면 cnt는 -1
+            # 못 찾았으면 k-1, 게다가 k가 0 이면 cnt는 0
             else:
                 if k == 1:
                     cnt = 0

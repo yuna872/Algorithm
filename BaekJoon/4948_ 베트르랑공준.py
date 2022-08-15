@@ -18,5 +18,6 @@ while True:
     if N == 0 :
         break
 
+    # N초과 2N 이하 범위의 소수 카운트
     print(isprime(2*N)[N+1:2*N+1].count(True))
         

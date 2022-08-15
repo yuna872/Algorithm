@@ -16,7 +16,7 @@ for test_case in range(1, T+1):
                     board[row][col] = color
                 # 어떤 색이 칠해져 있다면 3(보라색)으로
                 else:
-                    # board[row][col] = 3 생각해보니 칠하지 않고 그냥 카운트만 해줘도,,
+                    # board[row][col] = 3 생각해보니 칠하지 않고 그냥 카운트만 해줘도,,오키
                     purple += 1
 
     print(f'#{test_case} {purple}')

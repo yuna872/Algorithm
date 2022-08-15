@@ -1,0 +1,22 @@
+T = int(input())
+
+for test_case in range(1, T+1):
+    pattern = input()
+    str = input()
+    n = len(pattern)
+    m = len(str)
+
+    i = 0
+    j = 0
+    while i < m and j < n:
+        if pattern[j] == str[i]:
+            i += 1
+            j += 1
+        else:
+            i = i - j + 1
+            j = 0
+
+    if j == n:
+        print(f'#{test_case} 1')
+    else:
+        print(f'#{test_case} 0')
