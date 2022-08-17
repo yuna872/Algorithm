@@ -2,18 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dfc6f858-1e97-4399-9980-ec618e626596" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Programmers/K번째수.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BaekJoon/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BaekJoon/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BaekJoon/11660_구간합구하기5.py" beforeDir="false" afterPath="$PROJECT_DIR$/BaekJoon/11660_구간합구하기5.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SWEA/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/SWEA/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SWEA/1210_Ladder1.py" beforeDir="false" afterPath="$PROJECT_DIR$/SWEA/1210_Ladder1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SWEA/1747_소수팰린드롬.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SWEA/1873_상호의배틀필드.py" beforeDir="false" afterPath="$PROJECT_DIR$/SWEA/1873_상호의배틀필드.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SWEA/input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/SWEA/input.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SWEA/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/SWEA/test.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="2DCWoxOAYYoIfxRVClmG67fwt7w" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />

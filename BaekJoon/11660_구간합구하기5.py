@@ -5,6 +5,7 @@ N, M = map(int, input().split())
 
 arr = [list(map(int, input().split())) for _ in range(N)]
 
+# 누적합 구하기
 for i in range(N):
     for j in range(N):
         if 0 <= i-1 < N and 0 <= j-1 < N:
@@ -13,8 +14,9 @@ for i in range(N):
             arr[i][j] += arr[i-1][j]
         if 0 <= j-1 < N:
             arr[i][j] += arr[i][j - 1]
-print(arr)
+# print(arr)
 
+# DP
 for m in range(M):
     x1, y1, x2, y2 = map(int, input().split())
 
