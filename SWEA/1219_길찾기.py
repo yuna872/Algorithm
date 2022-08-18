@@ -1,5 +1,5 @@
-# import sys
-# sys.stdin = open('1219_input.txt', 'r')
+import sys
+sys.stdin = open('1219_input.txt', 'r')
 
 def dfs(v):
     visited = [False] * 100
@@ -10,16 +10,18 @@ def dfs(v):
 
     while ST:
         v = ST.pop()
+        print(v)
         for w in G[v]:
+            print(w)
             if visited[w] == False:
-                ST.append(w)
                 v = w
-                visited[w] = True
+                ST.append(v)
+                visited[v] = True
 
     return visited[99]
 
 
-for test_case in range(1,11):
+for test_case in range(1, 11):
     numT, roads = map(int, input().split())
 
 

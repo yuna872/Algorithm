@@ -2,9 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dfc6f858-1e97-4399-9980-ec618e626596" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/BaekJoon/2493_ 탑.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SWEA/1234_input.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SWEA/1234_비밀번호.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SWEA/3347_올림픽종목투표.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BaekJoon/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BaekJoon/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BaekJoon/11660_구간합구하기5.py" beforeDir="false" afterPath="$PROJECT_DIR$/BaekJoon/11660_구간합구하기5.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BaekJoon/12981_DNA비밀번호.py" beforeDir="false" afterPath="$PROJECT_DIR$/BaekJoon/12891_DNA비밀번호.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BaekJoon/2164_카드2.py" beforeDir="false" afterPath="$PROJECT_DIR$/BaekJoon/2164_카드2.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SWEA/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/SWEA/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SWEA/1219_길찾기.py" beforeDir="false" afterPath="$PROJECT_DIR$/SWEA/1219_길찾기.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SWEA/1228_암호문1.py" beforeDir="false" afterPath="$PROJECT_DIR$/SWEA/1228_암호문1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SWEA/2005_파스칼삼각형.py" beforeDir="false" afterPath="$PROJECT_DIR$/SWEA/2005_파스칼삼각형.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SWEA/4869_종이붙이기.py" beforeDir="false" afterPath="$PROJECT_DIR$/SWEA/4869_종이붙이기.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
