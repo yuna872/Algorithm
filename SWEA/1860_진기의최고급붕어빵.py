@@ -3,23 +3,14 @@ T = int(input())
 for test_case in range(1, T+1):
     N, M, K = map(int, input().split())
 
-    guest = list(map(int, input().split()))
+    guest = sorted(list(map(int, input().split())))
 
-    bbang = [0] * 101
-
-    # 붕어빵 만들기
-    i = 1
-    while i < 101:
-        if i % M == 0:
-            bbang[i] = bbang[i-1] + K
+    result = 'Possible'
+    for i in range(len(guest)):
+        if guest[i] // M * K >= i + 1:
+            continue
         else:
-            bbang[i] = bbang[i - 1]
+            result = 'Impossible'
+            break
 
-    print(bbang)
-
-
-
-
-
-
-
+    print(f'#{test_case} {result}')
