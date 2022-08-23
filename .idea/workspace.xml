@@ -2,18 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dfc6f858-1e97-4399-9980-ec618e626596" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/BaekJoon/2493_ 탑.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SWEA/1234_input.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SWEA/1234_비밀번호.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SWEA/3347_올림픽종목투표.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BaekJoon/1158_요세푸스문제.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BaekJoon/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BaekJoon/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BaekJoon/12981_DNA비밀번호.py" beforeDir="false" afterPath="$PROJECT_DIR$/BaekJoon/12891_DNA비밀번호.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BaekJoon/2164_카드2.py" beforeDir="false" afterPath="$PROJECT_DIR$/BaekJoon/2164_카드2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MInCoding/Level20/마이클잭슨무브먼트.py" beforeDir="false" afterPath="$PROJECT_DIR$/MInCoding/Level20/마이클잭슨무브먼트.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SWEA/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/SWEA/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SWEA/1219_길찾기.py" beforeDir="false" afterPath="$PROJECT_DIR$/SWEA/1219_길찾기.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SWEA/1228_암호문1.py" beforeDir="false" afterPath="$PROJECT_DIR$/SWEA/1228_암호문1.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SWEA/2005_파스칼삼각형.py" beforeDir="false" afterPath="$PROJECT_DIR$/SWEA/2005_파스칼삼각형.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SWEA/4869_종이붙이기.py" beforeDir="false" afterPath="$PROJECT_DIR$/SWEA/4869_종이붙이기.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +26,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="dfc6f858-1e97-4399-9980-ec618e626596" name="Default Changelist" comment="" />

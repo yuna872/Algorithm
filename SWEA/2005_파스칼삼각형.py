@@ -12,9 +12,6 @@ for row in range(10):
         else:
             triangle[row].append(triangle[row - 1][col - 1] + triangle[row - 1][col])
 
-# print(triangle)
-
-#
 for t in range(T):
     rows = int(input())
 

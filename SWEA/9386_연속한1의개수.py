@@ -1,18 +1,39 @@
+# T = int(input())
+#
+# for test_case in range(1,T+1):
+#     N = int(input())
+#
+#     arr = list(map(int,input()))
+#
+#     cnt_one = 0
+#     max_cnt = 0
+#     for i in arr:
+#         if i == 1:
+#             cnt_one += 1
+#         else:
+#             cnt_one = 0
+#         if cnt_one > max_cnt:
+#             max_cnt = cnt_one
+#
+#     print(f'#{test_case} {max_cnt}')
+
 T = int(input())
 
-for test_case in range(1,T+1):
+for test_case in range(1, T+1):
     N = int(input())
 
-    arr = list(map(int,input()))
+    arr = list(map(int, input()))
+    # print(arr)
 
-    cnt_one = 0
-    max_cnt = 0
+    cnt = 0
+    maxV = 0
     for i in arr:
         if i == 1:
-            cnt_one += 1
+            cnt += 1
         else:
-            cnt_one = 0
-        if cnt_one > max_cnt:
-            max_cnt = cnt_one
+            cnt = 0
 
-    print(f'#{test_case} {max_cnt}')
+        if cnt > maxV:
+            maxV = cnt
+
+    print(f'#{test_case} {maxV}')

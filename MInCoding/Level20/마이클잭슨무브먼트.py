@@ -1,10 +1,8 @@
-def count(level):
-    print(level)
-    if level == 0:
-        return
+def move(arr):
+    i = 0
+    while i < len(arr):
 
-    count(level-1)
-    print(level)
+
 
 steps = list(map(int,input().split()))
 
