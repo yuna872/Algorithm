@@ -2,11 +2,37 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dfc6f858-1e97-4399-9980-ec618e626596" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/BaekJoon/1158_요세푸스문제.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BaekJoon/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BaekJoon/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MInCoding/Level20/마이클잭슨무브먼트.py" beforeDir="false" afterPath="$PROJECT_DIR$/MInCoding/Level20/마이클잭슨무브먼트.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SWEA/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/SWEA/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SWEA/2005_파스칼삼각형.py" beforeDir="false" afterPath="$PROJECT_DIR$/SWEA/2005_파스칼삼각형.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BaekJoon/10157_자리배정.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BaekJoon/10163_색종이.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BaekJoon/1244_스위치켜고끄기.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BaekJoon/12927_배수스위치.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BaekJoon/13300_방배정.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BaekJoon/14696_딱지놀이.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BaekJoon/2116_주사위쌓기.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BaekJoon/2304_창고다각형.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BaekJoon/2477_참외밭.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BaekJoon/2491_수열.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BaekJoon/2527_직사각형.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BaekJoon/2559_수열.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BaekJoon/2563_색종이.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BaekJoon/2564_경비원.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BaekJoon/2578_빙고.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BaekJoon/2605_줄세우기.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BaekJoon/2628_종이자르기.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BaekJoon/2635_수이어가기.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BaekJoon/2669_합집합의면적구하기.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SWEA/1225_암호생성기.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SWEA/15170_낚시터자리잡기.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SWEA/5015_input.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SWEA/5015_미로의거리(dfs).py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SWEA/5015_미로의거리(dfs_최단).py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SWEA/5097_회전.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SWEA/5099_input.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SWEA/5099_피자굽기.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SWEA/5105_미로의거리.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SWEA/1954_달팽이숫자.py" beforeDir="false" afterPath="$PROJECT_DIR$/SWEA/1954_달팽이숫자.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SWEA/4875_미로.py" beforeDir="false" afterPath="$PROJECT_DIR$/SWEA/4875_미로.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
