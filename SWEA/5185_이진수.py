@@ -7,7 +7,6 @@ for test_case in range(1, T+1):
     N, hexa = input().split()
     N = int(N)
     bin = ''
-    res = ''
 
     for n in range(N-1, -1, -1):
         if hexa[n].isdecimal():
