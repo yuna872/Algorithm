@@ -3,45 +3,41 @@ sys.stdin = open('5207_input.txt', 'r')
 
 T = int(input())
 
-def binarySearch(A, low, high, key):
-    if low > high:
-        return
 
-    mid = (low + high) // 2
+# 반복구조
+def binarySearch(S, key):
+    low = 0
+    high = N - 1
+    visited = ['*']
 
-    if A[mid] == key:
-        if low == 0 and high == N-1:
-            return 1
+    while low <= high:
+        mid = (low + high) // 2
 
-        if visited == [1, 1]:
-            return 1
+        if S[mid] == key:
+            return visited
 
-        return 0
+        elif S[mid] > key:
+            visited.append('l')
+            high = mid - 1
+        else:
+            visited.append('r')
+            low = mid + 1
 
-    if A[mid] > key:
-        visited[0] = 1
-        binarySearch(A, low, mid-1, key)
-
-    else:
-        visited[1] = 1
-        binarySearch(A, mid+1, high, key)
+    return -1
 
 
 for test_case in range(1,T+1):
     N, M = map(int, input().split())
 
-    A = list(map(int, input().split()))
-    A.sort()
+    A = sorted(list(map(int, input().split())))
 
     B = list(map(int, input().split()))
 
     cnt = 0
     for b in B:
-        visited = [0] * 2
-        if binarySearch(A, 0, N-1, b):
+        res = binarySearch(A, b)
+        if res != -1 and 'rr' not in ''.join(res) and 'll' not in ''.join(res):
             cnt += 1
-
-
 
 
     print(f'#{test_case} {cnt}')
