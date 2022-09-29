@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dfc6f858-1e97-4399-9980-ec618e626596" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/BaekJoon/10944_별찍기19.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaekJoon/10997_별찍기22.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaekJoon/2800_괄호제거.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SWEA/5204_input.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SWEA/5204_병합정렬.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BaekJoon/14889_스타트와링크.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BaekJoon/15686_치킨배달.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BaekJoon/1759_암호만들기.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BaekJoon/15666_N과M.py" beforeDir="false" afterPath="$PROJECT_DIR$/BaekJoon/15666_N과M.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

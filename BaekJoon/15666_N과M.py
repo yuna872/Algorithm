@@ -6,6 +6,7 @@ def nCr(n, r, s):
         for i in range(n-r+1):
             comb[r-1] = nums[i]
             nCr(n, r-1, i+1)
+            comb[r-1] = 0
 
 
 N, M = map(int, input().split())
