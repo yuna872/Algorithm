@@ -1,12 +1,19 @@
+def dfs(num):
+    tree[num] = -2
+    for i in range(len(tree)):
+        if num == tree[i]:
+            dfs(i)
+
 N = int(input())
 
-parent = list(map(int, input().split()))
-tree = [[] * (N+1)]
+tree = list(map(int, input().split()))
 node = int(input())
+cnt = 0
 
-for i in range(N):
-    if parent[i] != -1:
-        tree[parent[i]].append(i)
+dfs(node)
 
-print(tree)
+for i in range(len(tree)):
+    if tree[i] != -2 and i not in tree:
+        cnt += 1
+print(cnt)
 
