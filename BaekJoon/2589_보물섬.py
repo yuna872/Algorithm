@@ -1,34 +1,41 @@
-def dfs(i, j, depth):
-    global maxV
+from collections import deque
 
-    if maxV < depth:
-        maxV = depth
+def bfs(i, j):
+    dq = deque()
 
-    for di, dj in [(0, 1), (1, 0), (-1, 0), (0, -1)]:
-        ni, nj = i+di, j+dj
-        if 0 <= ni < N and 0 <= nj < M and not visited[ni][nj] and island[ni][nj] != 'W':
-            # print(ni, nj)
-            visited[ni][nj] = 1
-            dfs(ni, nj, depth+1)
-            visited[ni][nj] = 0
+    dq.append((i, j))
+    visited[i][j] = 1
+    cnt = 0
 
-    return
+    while dq:
+        i, j = dq.popleft()
+
+        for di, dj in [(0, 1), (1, 0), (-1, 0), (0, -1)]:
+            ni, nj = i + di, j + dj
+            if 0 <= ni < N and 0 <= nj < M and not visited[ni][nj]:
+                if island[ni][nj] == 'L':
+                    dq.append((ni, nj))
+                    visited[ni][nj] = visited[i][j] + 1
+                    cnt = max(cnt, visited[ni][nj])
+    return cnt - 1
+
 
 N, M = map(int, input().split())
 
 island = [list(input()) for _ in range(N)]
-# print(island)
 
-visited = [[0] * M for _ in range(N)]
-maxV = 0
+land = []
 for i in range(N):
     for j in range(M):
-        # 육지인 경우에 탐색
-
         if island[i][j] == 'L':
+            land.append((i, j))
 
-            visited[i][j] = 1
-            dfs(i, j, 0)
+maxV = 0
+for i, j in land:
+    visited = [[0] * M for _ in range(N)]
+    maxV = max(maxV, bfs(i, j))
 
-print(maxV + 1)
-# print(maxV)
+print(maxV)
+
+
+
