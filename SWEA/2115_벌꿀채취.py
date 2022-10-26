@@ -1,6 +1,20 @@
 import sys
 sys.stdin = open('2115_input.txt', 'r')
 
+def dfs(idx, sumV, total, honey):
+    global maxP
+    if sumV > C:
+        return
+
+    if i == M:
+        maxP = max(maxV, total)
+        return
+
+    # 꿀을 채취할 수 있는 조건이면 채취하거나
+    dfs(idx+1, sumV+honey[idx], total+honey[idx]**2, honey)
+    # 채취하지 않거나
+    dfs(idx+1, sumV, total, honey)
+
 def solve(i, j, profit, k):
     global maxV
 
@@ -23,30 +37,18 @@ def solve(i, j, profit, k):
             # 방문처리 해주기
             visited[i][j] = 1
             honey.append(arr[i][j])
-            honey.sort(reverse=True)
-            # print(i, j)
+
         j += 1
         tmp += 1
 
-
-    par(0)
-    # 채취할 수 있는 꿀의 양이 제한되어 있음
-    real_honey = 0
-    for h in honey:
-        if (h + real_honey) <= C:
-            # 꿀 채취하기
-            real_honey += h
-            # 수익
-            profit += h ** 2
+    maxP = 0
+    dfs(0, 0, 0, honey)
 
     # 다음 일꾼 꿀 모으러 가기
     for ni in range(N):
         for nj in range(N):
             if not visited[ni][nj]:
-                solve(ni, nj, profit, k+1)
-
-def getHoney(midSum)
-
+                solve(ni, nj, profit+maxP, k+1)
 
 
 T = int(input())
@@ -61,8 +63,10 @@ for test_case in range(1, T+1):
         big = max(big, max(arr[i]))
 
     maxV = 0
+
     for i in range(N):
         for j in range(N):
+
             visited = [[0] * N for _ in range(N)]
             solve(i, j, 0, 0)
 
