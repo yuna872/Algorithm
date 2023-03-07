@@ -1,25 +1,25 @@
 function solution(n, stations, w) {
   var answer = 0;
-  const apt = new Array(n + 1).fill(false);
+  const len = stations.length;
+  const coverage = 2 * w + 1;
 
-  for (let i of stations) {
-    for(let j = 1; j < w+1; j++) {
-        if(i-j > 0) apt[i-j] = true
-        if(i+j < n+1) apt[i+j] = true
-    }
+  // 지역의 번호는 1부터 시작한다.
+  let cur = 1;
+  for (let s of stations) {
+    // cur 부터 현재 기지국이 커버하는 구간의 바로 앞 인덱스까지의 길이
+    let cnt = s- w - cur;
+    // 설치되어야 하는 기지국의 최소 개수
+    answer += Math.ceil(cnt / coverage);
+    // 현재 기지국이 커버하는 구간의 바로 다음 인덱스로 cur를 갱신
+    cur = s + w + 1;
   }
 
-  let cnt = w;
-  for (let i = 1; i < n + 1; i++) {
-    if (!apt[i]) {
-      if (cnt === 0) {
-        answer++; // 기지국을 설치
-        cnt = w;
-      } else {
-        cnt--;
-      }
-    }
+  // 마지막으로 커버된 인덱스가 아직 n보다 작을 경우
+  if (cur < n + 1) {
+    // 빠짐없이 기지국 설치해주기
+    answer += Math.ceil((n - cur + 1) / coverage);
   }
+
   return answer;
 }
 
