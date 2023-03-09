@@ -1,28 +1,30 @@
 function solution(tickets) {
-  var answer = ["ICN"];
+  var answer = [];
   const len = tickets.length;
   const visited = new Array(len).fill(false);
-  tickets.sort()
-  console.log(tickets);
-  const queue = [tickets[0]];
-  visited[0] = true;
 
-  while (queue.length) {
-    const curPoint = queue.shift();
+  tickets.sort();
 
-    if (answer.length === len) {
-      answer.push(curPoint[1]);
-      return answer;
+  let result = [];
+  function dfs(str, depth) {
+    result.push(str);
+
+    if (depth === len) {
+      console.log(depth)
+      answer = result
+      return
     }
 
     for (let i = 0; i < len; i++) {
-      if (!visited[i] && curPoint[1] === tickets[i][0]) {
-        answer.push(curPoint[1]);
+      if (!visited[i] && str === tickets[i][0]) {
         visited[i] = true;
-        queue.push(tickets[i]);
+        dfs(tickets[i][1], depth + 1);
       }
     }
   }
+
+  dfs("ICN", 0);
+  return answer;
 }
 
 console.log(
