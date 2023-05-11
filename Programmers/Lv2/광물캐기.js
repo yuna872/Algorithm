@@ -1,9 +1,11 @@
 function solution(picks, minerals) {
   var answer = 0;
-
-  const len = Math.ceil(minerals)
   
-  
+  let tired = [];
+  let i = 0
+  while(i < minerals.length) {
+    
+  }
 
   return answer;
 }
