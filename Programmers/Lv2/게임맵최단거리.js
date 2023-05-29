@@ -2,12 +2,9 @@ function solution(maps) {
   const n = maps.length;
   const m = maps[0].length;
 
-  let visited = new Array(n);
-  for (let i = 0; i < m; i++) {
-    visited[i] = new Array(m).fill(false);
-  }
-  visited[0][0] = true;
+  let visited = new Array(n).fill().map(() => new Array(m).fill(false));
 
+  visited[0][0] = true;
   let queue = [[0, 0, 1]];
 
   const D = [
