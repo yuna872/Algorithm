@@ -1,15 +1,6 @@
 function solution(numbers) {
-  var answer = '';
-  let tmp = []
-  
-  for(let num of numbers) tmp.push(num.toString())
-
-  tmp.sort((a,b) => (a+b)-(b+a))
-  
-  for(let i = numbers.length-1;i >=0; i--) {
-    answer += tmp[i]
-  }
-  return answer;
+  var answer = numbers.map((num) => num.toString()).sort((a, b) => (b+a) - (a+b)).join('')
+  return answer[0] === '0' ? '0' : answer
 }
 
 console.log(solution([6,10,2]))
