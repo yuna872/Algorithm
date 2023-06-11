@@ -11,6 +11,7 @@ function solution(files) {
     fileStr.forEach((str, i) => {
       if (start === -1 && !isNaN(str)) start = i;
       else if (start >= 0 && end === -1 && isNaN(str)) {
+        if(i-start > 5) end = start + 5
         end = i;
       }
     });
