@@ -5,28 +5,24 @@ const input = require("fs")
   .split("\n");
 
 let [W, N] = input.shift().split(" ").map(Number);
-let obj = {};
+let graph = [];
 for (let n = 0; n < N; n++) {
-  let [w, price] = input.shift().split(" ").map(Number);
-  obj[price] = w;
+  graph[n] = input.shift().split(" ").map(Number);
 }
 
-let sortedArr = Object.keys(obj).sort((a, b) => b - a);
+graph.sort((a, b) => b[1] - a[1]);
 
 let answer = 0;
-let i = 0;
-while (W > 0) {
-  let price = Number(sortedArr[i]);
-  let w = obj[price]
-
-  if (W > w) {
-    W -= w;
-    answer += w * price;
+for (let i = 0; i < graph.length; i++) {
+  if (W === 0) continue;
+  let [weight, price] = graph[i];
+  if (weight < W) {
+    W -= weight;
+    answer += price * weight;
   } else {
-    answer += W * price;
+    answer += price * W;
     W = 0;
   }
-  i++;
 }
 
 console.log(answer);
