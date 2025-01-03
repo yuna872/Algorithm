@@ -1,25 +1,47 @@
+// function solution(progresses, speeds) {
+//   var answer = [];
+
+//   let restDay = [];
+//   for (let i = 0; i < progresses.length; i++) {
+//     restDay.push(Math.ceil((100 - progresses[i]) / speeds[i]));
+//   }
+
+//   let day = restDay.shift();
+//   let cnt = 1;
+//   while (restDay.length > 0) {
+//     let tmp = restDay.shift();
+
+//     if (day < tmp) {
+//       day = tmp;
+//       answer.push(cnt)
+//       cnt = 1
+//     } else {
+//       cnt++
+//     }
+//   }
+//   answer.push(cnt)
+
+//   return answer;
+// }
+
 function solution(progresses, speeds) {
   var answer = [];
 
-  let restDay = [];
-  for (let i = 0; i < progresses.length; i++) {
-    restDay.push(Math.ceil((100 - progresses[i]) / speeds[i]));
-  }
-
-  let day = restDay.shift();
-  let cnt = 1;
-  while (restDay.length > 0) {
-    let tmp = restDay.shift();
-    
-    if (day < tmp) {
-      day = tmp;
-      answer.push(cnt)
-      cnt = 1
-    } else {
-      cnt++
+  let queue = progresses;
+  while (queue.length) {
+    for (let i = 0; i < progresses.length; i++) {
+      queue[i] += speeds[i];
     }
+
+    let cnt = 0;
+    while (queue[0] >= 100) {
+      queue.shift();
+      speeds.shift();
+      cnt++;
+    }
+
+    if (cnt) answer.push(cnt);
   }
-  answer.push(cnt)
 
   return answer;
 }
