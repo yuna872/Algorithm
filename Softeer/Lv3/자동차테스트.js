@@ -26,7 +26,7 @@ const binarySearch = (arr, target) => {
 
 let answer = new Array(Q).fill(0);
 for (let q = 0; q < Q; q++) {
-  let m = +input.shift();
+  let m = +input[q];
 
   // 중앙값 인덱스 찾기
   let mid = binarySearch(cars, m);
