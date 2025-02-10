@@ -37,12 +37,12 @@ for (let t = 0; t < T; t++) {
     if (!parents[x]) {
       parents[x] = x;
       visited[x] = 1;
-    } else visited[x] += 1;
+    }
 
     if (!parents[y]) {
       parents[y] = y;
       visited[y] = 1;
-    } else visited[y] += 1;
+    }
 
     union(x, y);
     console.log(visited[find(x)]);
