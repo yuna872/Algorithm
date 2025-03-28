@@ -4,53 +4,66 @@ const input = require("fs")
   .trim()
   .split("\n");
 
-const [N, M] = input.shift().split(" ").map(Number);
-const box = new Array(M);
-for (let i = 0; i < M; i++) {
-  box[i] = input[i].split(" ").map(Number);
+const [N, M, H] = input.shift().split(" ").map(Number);
+let box = new Array(H);
+for (let h = 0; h < H; h++) {
+  let tomatos = new Array(M);
+
+  for (let n = 0; n < M; n++) {
+    tomatos[n] = input.shift().split(" ").map(Number)  }
+
+  box[h] = tomatos;
 }
 
-const findRipeTomatos = (box) => {
-  let tomatos = [];
+const direction = [
+  [1, 0, 0],
+  [-1, 0, 0],
+  [0, 1, 0],
+  [0, -1, 0],
+  [0, 0, 1],
+  [0, 0, -1],
+];
+
+let unRipleTomato = 0;
+let queue = [];
+for (let k = 0; k < H; k++) {
   for (let i = 0; i < M; i++) {
     for (let j = 0; j < N; j++) {
-      if (box[i][j] === 1) tomatos.push([i, j]);
-    }
-  }
-  return tomatos;
-};
-
-let day = 0;
-const bfs = () => {
-  let queue = findRipeTomatos(box);
-
-  while (queue.length) {
-    let [i, j] = queue.shift();
-
-    for (let [di, dj] of [
-      [0, 1],
-      [1, 0],
-      [-1, 0],
-      [0, -1],
-    ]) {
-      const ni = i + di;
-      const nj = j + dj;
-      if (ni >= 0 && ni < M && nj >= 0 && nj < N && box[ni][nj] === 0) {
-        box[ni][nj] = box[i][j] + 1;
-        day = box[i][j];
-        queue.push([ni, nj]);
+      if (box[k][i][j] === 1) {
+        queue.push([i, j, k, 0]);
       }
+      if (box[k][i][j] === 0) unRipleTomato++;
     }
-  }
-};
-
-bfs();
-
-for (let i = 0; i < M; i++) {
-  if (box[i].includes(0)) {
-    day = -1
-    break;
   }
 }
 
-console.log(day);
+let front = 0;
+let answer = -1;
+while (front < queue.length) {
+  const [i, j, k, days] = queue[front++];
+
+  for (let [di, dj, dk] of direction) {
+    const ni = i + di;
+    const nj = j + dj;
+    const nk = k + dk;
+    if (
+      0 <= ni &&
+      ni < M &&
+      0 <= nj &&
+      nj < N &&
+      0 <= nk &&
+      nk < H &&
+      box[nk][ni][nj] === 0
+    ) {
+      queue.push([ni, nj, nk, days + 1]);
+      box[nk][ni][nj] = 1;
+      unRipleTomato--
+    }
+  }
+
+  answer = unRipleTomato == 0 ? days : -1
+
+}
+
+
+console.log(answer)
