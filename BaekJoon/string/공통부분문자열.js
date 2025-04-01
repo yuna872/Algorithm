@@ -2,12 +2,24 @@ const input = require("fs")
   .readFileSync(process.platform === "linux" ? "/dev/stdin" : "./input.txt")
   .toString()
   .trim()
-    .split("\n");
-  
-const s = input[0]
-const t = input[1]
-for (let i = 0; i < s.length-1; i++) {
-    for (let j = i + 1; j < s.length; i++) {
-        
+  .split("\n");
+
+const str1 = input[0];
+const str2 = input[1];
+
+const n = str1.length;
+const m = str2.length;
+
+let dp = new Array(n + 1).fill().map(() => new Array(m + 1).fill(0));
+
+let maxV = 0;
+for (let i = 1; i < n + 1; i++) {
+  for (let j = 1; j < m + 1; j++) {
+    if (str1[i - 1] === str2[j - 1]) {
+      dp[i][j] = dp[i - 1][j - 1] > 0 ? dp[i - 1][j - 1] + 1 : 1;
+      if (dp[i][j] > maxV) maxV = dp[i][j];
     }
+  }
 }
+
+console.log(maxV);
