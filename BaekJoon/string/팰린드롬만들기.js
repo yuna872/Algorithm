@@ -1,0 +1,36 @@
+const input = require("fs")
+  .readFileSync(process.platform === "linux" ? "/dev/stdin" : "./input.txt")
+  .toString()
+  .trim()
+  .split("\n");
+
+const str = input[0];
+const reverse = str.split("").reverse().join("");
+
+const n = str.length;
+
+const isPalindrome = (str) => {
+  let left = 0;
+  let right = str.length - 1;
+  while (left < right) {
+    if (str[left] === str[right]) {
+      left++;
+      right--;
+    } else return false;
+  }
+
+  return true;
+};
+
+const solution = (str) => {
+  for (let i = 0; i < n; i++) {
+    const subStr = str.substring(i);
+    if (isPalindrome(subStr)) {
+      return i + n;
+    }
+  }
+
+  return 2 * n;
+};
+
+console.log(solution(str))
