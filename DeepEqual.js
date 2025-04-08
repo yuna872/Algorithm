@@ -24,6 +24,7 @@ function deepEqual(obj1, obj2) {
 console.log(
   deepEqual({ a: "deep", b: [1, 2, 3] }, { a: "deep", b: ["1", "2", "3"] })
 );
+
 console.log(
   deepEqual(
     { a: "deep", b: ["1", "2", "3"] },
